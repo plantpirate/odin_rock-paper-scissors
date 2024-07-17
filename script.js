@@ -21,7 +21,10 @@ function getComputerChoice() {
 // Hint: Use the prompt method to get the user’s input.
 // Test what your function returns by using console.log.
 function getHumanChoice() {
-  const humanChoice = prompt("Choose your weapon.", "Rock, paper, or scissors");
+  const humanChoice = prompt(
+    "Choose your weapon.",
+    "Rock, paper, or scissors"
+  ).toLowerCase();
   return humanChoice;
 }
 
