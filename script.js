@@ -15,5 +15,16 @@ function getComputerChoice() {
   return choicesArr[computerChoice];
 }
 
-console.log(getComputerChoice());
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
+console.log(getComputerChoice());
+
+// Create a new function named getHumanChoice.
+// Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
+// Hint: Use the prompt method to get the user’s input.
+// Test what your function returns by using console.log.
+function getHumanChoice() {
+  const humanChoice = prompt("Choose your weapon.", "Rock, paper, or scissors");
+  return console.log(humanChoice);
+}
+
+getHumanChoice();
