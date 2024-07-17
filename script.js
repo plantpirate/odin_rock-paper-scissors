@@ -27,4 +27,8 @@ function getHumanChoice() {
   return console.log(humanChoice);
 }
 
-getHumanChoice();
+// Create two new variables named humanScore and computerScore in the global scope.
+// Initialize those variables with the value of 0.
+
+const humanScore = 0;
+const computerScore = 0;
