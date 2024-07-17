@@ -10,13 +10,12 @@ function getComputerChoice() {
   // create array with string options
   const choicesArr = ["rock", "paper", "scissors"];
   // generate a random number up to length of const array
-  const computerChoice = Math.floor(Math.random() * 3);
-  // return element from array using position from random number generated
-  return choicesArr[computerChoice];
+  const computerChoice = choicesArr[Math.floor(Math.random() * 3)];
+  console.log(computerChoice);
 }
 
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
-console.log(getComputerChoice());
+getComputerChoice();
 
 // Create a new function named getHumanChoice.
 // Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
