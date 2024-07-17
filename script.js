@@ -41,24 +41,26 @@ let computerScore = 0;
 // Increment the humanScore or computerScore variable based on the round winner.
 
 function playRound(humanChoice, computerChoice) {
-  if (computerChoice === "rock" && humanChoice === "rock") {
+  if (humanChoice === "rock" && computerChoice === "rock") {
     console.log("Draw!");
-  } else if (computerChoice === "paper" && humanChoice === "paper") {
+  } else if (humanChoice === "paper" && computerChoice === "paper") {
     console.log("Draw!");
-  } else if (computerChoice === "scissors" && humanChoice === "scissors") {
+  } else if (humanChoice === "scissors" && computerChoice === "scissors") {
     console.log("Draw!");
-  } else if (computerChoice === "rock" && humanChoice === "paper") {
-    console.log("Paper beats rock!");
-  } else if (computerChoice === "rock" && humanChoice === "scissors") {
-    console.log("Rock beats scissors!");
-  } else if (computerChoice === "paper" && humanChoice === "scissors") {
-    console.log("Scissors beats paper!");
-  } else if (computerChoice === "paper" && humanChoice === "rock") {
-    console.log("Paper beats rock!");
-  } else if (computerChoice === "scissors" && humanChoice === "paper") {
-    console.log("Scissors beats paper!");
-  } else if (computerChoice === "scissors" && humanChoice === "rock") {
-    console.log("Rock beats scissors!");
+  } else if (humanChoice === "rock" && computerChoice === "paper") {
+    console.log("You lose! Paper beats rock!");
+  } else if (humanChoice === "rock" && computerChoice === "scissors") {
+    console.log("You win! Rock beats scissors!");
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+    console.log("You lose! Scissors beats paper!");
+  } else if (humanChoice === "paper" && computerChoice === "rock") {
+    console.log("You win! Paper beats rock!");
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+    console.log("You lose! Rock beats scissors!");
+  } else if (humanChoice === "scissors" && computerChoice === "paper") {
+    console.log("You win! Scissors beats paper!");
+  } else {
+    console.log("Choose an actual option!");
   }
 }
 
