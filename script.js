@@ -1,6 +1,12 @@
 "use strict";
 console.log("hello jobin");
 
+// Create two new variables named humanScore and computerScore in the global scope.
+// Initialize those variables with the value of 0.
+
+let humanScore = 0;
+let computerScore = 0;
+
 // Create a new function named getComputerChoice.
 // Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
 
@@ -27,12 +33,6 @@ function getHumanChoice() {
   ).toLowerCase();
   return humanChoice;
 }
-
-// Create two new variables named humanScore and computerScore in the global scope.
-// Initialize those variables with the value of 0.
-
-let humanScore = 0;
-let computerScore = 0;
 
 // Create a new function named playRound.
 // Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments.
