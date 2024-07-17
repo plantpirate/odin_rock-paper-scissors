@@ -11,11 +11,10 @@ function getComputerChoice() {
   const choicesArr = ["rock", "paper", "scissors"];
   // generate a random number up to length of const array
   const computerChoice = choicesArr[Math.floor(Math.random() * 3)];
-  console.log(computerChoice);
+  return computerChoice;
 }
 
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
-getComputerChoice();
 
 // Create a new function named getHumanChoice.
 // Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
@@ -23,7 +22,7 @@ getComputerChoice();
 // Test what your function returns by using console.log.
 function getHumanChoice() {
   const humanChoice = prompt("Choose your weapon.", "Rock, paper, or scissors");
-  return console.log(humanChoice);
+  return humanChoice;
 }
 
 // Create two new variables named humanScore and computerScore in the global scope.
@@ -41,9 +40,21 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
   if (computerChoice === "rock" && humanChoice === "rock") {
     console.log("Draw!");
+  } else if (computerChoice === "paper" && humanChoice === "paper") {
+    console.log("Draw!");
+  } else if (computerChoice === "scissors" && humanChoice === "scissors") {
+    console.log("Draw!");
   } else if (computerChoice === "rock" && humanChoice === "paper") {
     console.log("Paper beats rock!");
-  } else {
+  } else if (computerChoice === "rock" && humanChoice === "scissors") {
+    console.log("Rock beats scissors!");
+  } else if (computerChoice === "paper" && humanChoice === "scissors") {
+    console.log("Scissors beats paper!");
+  } else if (computerChoice === "paper" && humanChoice === "rock") {
+    console.log("Paper beats rock!");
+  } else if (computerChoice === "scissors" && humanChoice === "paper") {
+    console.log("Scissors beats paper!");
+  } else if (computerChoice === "scissors" && humanChoice === "rock") {
     console.log("Rock beats scissors!");
   }
 }
