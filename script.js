@@ -4,9 +4,6 @@ console.log("hello jobin");
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
 
-let humanScore = 0;
-let computerScore = 0;
-
 // Create a new function named getComputerChoice.
 // Write the code so that getComputerChoice will randomly return one of the following string values: “rock”, “paper” or “scissors”.
 
@@ -70,6 +67,8 @@ function getHumanChoice() {
 //   }
 // }
 function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
   for (let i = 1; i <= 5; i++) {
     function playRound(humanChoice, computerChoice) {
       if (humanChoice === "rock" && computerChoice === "rock") {
@@ -104,7 +103,10 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
+  if (humanScore > computerScore) {
+    console.log(`You win! ${humanScore} to ${computerScore}`);
+  } else {
+    console.log(`You lose! ${humanScore} to ${computerScore}`);
+  }
 }
 playGame();
-console.log(`Your score: ${humanScore}`);
-console.log(`Computer score: ${computerScore}`);
