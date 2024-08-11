@@ -103,7 +103,9 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
-  if (humanScore > computerScore) {
+  if (humanScore === computerScore) {
+    console.log(`It's a draw! ${humanScore} to ${computerScore}`);
+  } else if (humanScore > computerScore) {
     console.log(`You win! ${humanScore} to ${computerScore}`);
   } else {
     console.log(`You lose! ${humanScore} to ${computerScore}`);
