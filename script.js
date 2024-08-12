@@ -34,6 +34,8 @@ function playGame() {
   const results = document.querySelector(".results__container span");
   const humanSpan = document.querySelector(".human-choice span");
   const computerSpan = document.querySelector(".computer-choice span");
+  const humanScoreText = document.querySelector(".human_score span");
+  const computerScoreText = document.querySelector(".computer_score span");
 
   let humanScore = 0;
   let computerScore = 0;
@@ -95,6 +97,18 @@ function playGame() {
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
       humanScore += 1;
       results.innerText = "You win! Scissors beats paper!";
+    }
+    humanScoreText.innerText = `${humanScore}`;
+    computerScoreText.innerText = `${computerScore}`;
+
+    if (humanScore === 5 && computerScore < humanScore) {
+      results.innerText = "you win";
+      humanScore = 0;
+      computerScore = 0;
+    } else if (computerScore === 5 && humanScore < computerScore) {
+      results.innerText = "you lose";
+      humanScore = 0;
+      computerScore = 0;
     }
   }
 }
