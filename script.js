@@ -32,6 +32,9 @@ function getComputerChoice() {
 
 function playGame() {
   const results = document.querySelector(".results__container span");
+  const humanSpan = document.querySelector(".human-choice span");
+  const computerSpan = document.querySelector(".computer-choice span");
+
   let humanScore = 0;
   let computerScore = 0;
 
@@ -43,18 +46,24 @@ function playGame() {
     rockBtn.addEventListener("click", function () {
       const humanChoice = "rock";
       const computerChoice = getComputerChoice();
+      humanSpan.innerText = `${humanChoice}`;
+      computerSpan.innerText = `${computerChoice}`;
       playRound(humanChoice, computerChoice);
     });
 
     paperBtn.addEventListener("click", function () {
       const humanChoice = "paper";
       const computerChoice = getComputerChoice();
+      humanSpan.innerText = `${humanChoice}`;
+      computerSpan.innerText = `${computerChoice}`;
       playRound(humanChoice, computerChoice);
     });
 
     scissorsBtn.addEventListener("click", function () {
       const humanChoice = "scissors";
       const computerChoice = getComputerChoice();
+      humanSpan.innerText = `${humanChoice}`;
+      computerSpan.innerText = `${computerChoice}`;
       playRound(humanChoice, computerChoice);
     });
   }
