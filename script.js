@@ -103,10 +103,12 @@ function playGame() {
 
     if (humanScore === 5 && computerScore < humanScore) {
       results.innerText = "you win";
+      humanSpan.innerText = computerSpan.innerText = "";
       humanScore = 0;
       computerScore = 0;
     } else if (computerScore === 5 && humanScore < computerScore) {
       results.innerText = "you lose";
+      humanSpan.innerText = computerSpan.innerText = "";
       humanScore = 0;
       computerScore = 0;
     }
