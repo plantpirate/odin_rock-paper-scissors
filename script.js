@@ -26,6 +26,8 @@ function playGame() {
   const updateUI = function (humanChoice, computerChoice) {
     humanSpan.innerText = `${humanChoice}`;
     computerSpan.innerText = `${computerChoice}`;
+    humanScoreText.innerText = `${humanScore}`;
+    computerScoreText.innerText = `${computerScore}`;
   };
 
   let humanScore = 0;
@@ -66,8 +68,7 @@ function playGame() {
       humanScore += 1;
       results.innerText = "You win! Scissors beats paper!";
     }
-    humanScoreText.innerText = `${humanScore}`;
-    computerScoreText.innerText = `${computerScore}`;
+    updateUI(humanChoice, computerChoice);
 
     if (humanScore === 5 && computerScore < humanScore) {
       results.innerText = "you win";
