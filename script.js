@@ -30,6 +30,9 @@ function playGame() {
     computerScoreText.innerText = `${computerScore}`;
   };
 
+  const clearChoicesText = function () {
+    humanSpan.innerText = computerSpan.innerText = "";
+  };
   let humanScore = 0;
   let computerScore = 0;
 
@@ -72,12 +75,12 @@ function playGame() {
 
     if (humanScore === 5 && computerScore < humanScore) {
       results.innerText = "you win";
-      humanSpan.innerText = computerSpan.innerText = "";
+      clearChoicesText();
       humanScore = 0;
       computerScore = 0;
     } else if (computerScore === 5 && humanScore < computerScore) {
       results.innerText = "you lose";
-      humanSpan.innerText = computerSpan.innerText = "";
+      clearChoicesText();
       humanScore = 0;
       computerScore = 0;
     }
