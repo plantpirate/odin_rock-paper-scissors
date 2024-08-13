@@ -16,7 +16,8 @@ function getComputerChoice() {
 }
 
 function playGame() {
-  const results = document.querySelector(".results__container span");
+  const roundResults = document.querySelector(".round-results span");
+  const gameResults = document.querySelector(".game-results span");
   const humanSpan = document.querySelector(".human-choice span");
   const computerSpan = document.querySelector(".computer-choice span");
   const humanScoreText = document.querySelector(".human_score span");
