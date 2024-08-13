@@ -23,6 +23,11 @@ function playGame() {
   const computerScoreText = document.querySelector(".computer_score span");
   const buttons = document.querySelectorAll(".button");
 
+  const updateUI = function (humanChoice, computerChoice) {
+    humanSpan.innerText = `${humanChoice}`;
+    computerSpan.innerText = `${computerChoice}`;
+  };
+
   let humanScore = 0;
   let computerScore = 0;
 
@@ -31,8 +36,7 @@ function playGame() {
       btn.addEventListener("click", function () {
         const humanChoice = btn.id;
         const computerChoice = getComputerChoice();
-        humanSpan.innerText = `${humanChoice}`;
-        computerSpan.innerText = `${computerChoice}`;
+        updateUI(humanChoice, computerChoice);
         playRound(humanChoice, computerChoice);
       });
     });
