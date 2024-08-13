@@ -55,34 +55,34 @@ function playGame() {
 
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-      results.innerText = "Draw!";
+      roundResults.innerText = "Draw!";
     } else if (humanChoice === "rock" && computerChoice === "paper") {
       computerScore += 1;
-      results.innerText = "You lose! Paper beats rock!";
+      roundResults.innerText = "You lose! Paper beats rock!";
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
       humanScore += 1;
-      results.innerText = "You win! Rock beats scissors!";
+      roundResults.innerText = "You win! Rock beats scissors!";
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
       computerScore += 1;
-      results.innerText = "You lose! Scissors beats paper!";
+      roundResults.innerText = "You lose! Scissors beats paper!";
     } else if (humanChoice === "paper" && computerChoice === "rock") {
       humanScore += 1;
-      results.innerText = "You win! Paper beats rock!";
+      roundResults.innerText = "You win! Paper beats rock!";
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
       computerScore += 1;
-      results.innerText = "You lose! Rock beats scissors!";
+      roundResults.innerText = "You lose! Rock beats scissors!";
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
       humanScore += 1;
-      results.innerText = "You win! Scissors beats paper!";
+      roundResults.innerText = "You win! Scissors beats paper!";
     }
     updateUI(humanChoice, computerChoice);
 
     if (humanScore === 5 && computerScore < humanScore) {
-      results.innerText = "you win";
+      gameResults.innerText = "you win";
       clearChoicesText();
       resetScores();
     } else if (computerScore === 5 && humanScore < computerScore) {
-      results.innerText = "you lose";
+      gameResults.innerText = "you lose";
       clearChoicesText();
       resetScores();
     }
