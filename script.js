@@ -86,10 +86,10 @@ function playGame() {
     }
     updateUI(humanChoice, computerChoice);
 
-    if (humanScore === 5 && computerScore < humanScore) {
+    if (humanScore === 5) {
       gameResults.innerText = "You won the game";
       endGame();
-    } else if (computerScore === 5 && humanScore < computerScore) {
+    } else if (computerScore === 5) {
       gameResults.innerText = "You lost the game";
       endGame();
     }
