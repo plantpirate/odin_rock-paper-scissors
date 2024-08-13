@@ -38,6 +38,11 @@ function playGame() {
     humanScore = computerScore = 0;
   };
 
+  const endGame = function () {
+    clearChoicesText();
+    resetScores();
+    gameEnded = true;
+  };
   let humanScore = 0;
   let computerScore = 0;
   let gameEnded = false;
@@ -83,14 +88,10 @@ function playGame() {
 
     if (humanScore === 5 && computerScore < humanScore) {
       gameResults.innerText = "You won the game";
-      clearChoicesText();
-      resetScores();
-      gameEnded = true;
+      endGame();
     } else if (computerScore === 5 && humanScore < computerScore) {
       gameResults.innerText = "You lost the game";
-      clearChoicesText();
-      resetScores();
-      gameEnded = true;
+      endGame();
     }
   }
 }
