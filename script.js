@@ -31,6 +31,15 @@ function playGame() {
     computerScoreText.innerText = `${computerScore}`;
   };
 
+  const restartBtn = document.querySelector(".restart");
+  restartBtn.addEventListener("click", function () {
+    resetScores();
+    clearChoicesText();
+    roundResults.innerText = gameResults.innerText = "";
+    humanScoreText.innerText = computerScoreText.innerText = "";
+    gameEnded = false;
+  });
+
   const clearChoicesText = function () {
     humanSpan.innerText = computerSpan.innerText = "";
   };
