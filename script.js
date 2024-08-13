@@ -37,17 +37,21 @@ function playGame() {
   const resetScores = function () {
     humanScore = computerScore = 0;
   };
+
   let humanScore = 0;
   let computerScore = 0;
+  let gameEnded = false;
 
   function getHumanChoice() {
     buttons.forEach((btn) => {
       btn.addEventListener("click", function () {
-        gameResults.innerText = "";
-        const humanChoice = btn.id;
-        const computerChoice = getComputerChoice();
-        updateUI(humanChoice, computerChoice);
-        playRound(humanChoice, computerChoice);
+        if (!gameEnded) {
+          gameResults.innerText = "";
+          const humanChoice = btn.id;
+          const computerChoice = getComputerChoice();
+          updateUI(humanChoice, computerChoice);
+          playRound(humanChoice, computerChoice);
+        }
       });
     });
   }
@@ -82,10 +86,12 @@ function playGame() {
       gameResults.innerText = "You won the game";
       clearChoicesText();
       resetScores();
+      gameEnded = true;
     } else if (computerScore === 5 && humanScore < computerScore) {
       gameResults.innerText = "You lost the game";
       clearChoicesText();
       resetScores();
+      gameEnded = true;
     }
   }
 }
