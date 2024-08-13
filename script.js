@@ -49,7 +49,6 @@ function playGame() {
           gameResults.innerText = "";
           const humanChoice = btn.id;
           const computerChoice = getComputerChoice();
-          updateUI(humanChoice, computerChoice);
           playRound(humanChoice, computerChoice);
         }
       });
