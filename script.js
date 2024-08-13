@@ -33,6 +33,9 @@ function playGame() {
   const clearChoicesText = function () {
     humanSpan.innerText = computerSpan.innerText = "";
   };
+  const resetScores = function () {
+    humanScore = computerScore = 0;
+  };
   let humanScore = 0;
   let computerScore = 0;
 
@@ -76,13 +79,11 @@ function playGame() {
     if (humanScore === 5 && computerScore < humanScore) {
       results.innerText = "you win";
       clearChoicesText();
-      humanScore = 0;
-      computerScore = 0;
+      resetScores();
     } else if (computerScore === 5 && humanScore < computerScore) {
       results.innerText = "you lose";
       clearChoicesText();
-      humanScore = 0;
-      computerScore = 0;
+      resetScores();
     }
   }
 }
