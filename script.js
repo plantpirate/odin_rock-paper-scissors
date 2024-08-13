@@ -36,37 +36,20 @@ function playGame() {
   const computerSpan = document.querySelector(".computer-choice span");
   const humanScoreText = document.querySelector(".human_score span");
   const computerScoreText = document.querySelector(".computer_score span");
+  const buttons = document.querySelectorAll(".button");
 
   let humanScore = 0;
   let computerScore = 0;
 
   function getHumanChoice() {
-    const rockBtn = document.getElementById("rock");
-    const paperBtn = document.getElementById("paper");
-    const scissorsBtn = document.getElementById("scissors");
-
-    rockBtn.addEventListener("click", function () {
-      const humanChoice = "rock";
-      const computerChoice = getComputerChoice();
-      humanSpan.innerText = `${humanChoice}`;
-      computerSpan.innerText = `${computerChoice}`;
-      playRound(humanChoice, computerChoice);
-    });
-
-    paperBtn.addEventListener("click", function () {
-      const humanChoice = "paper";
-      const computerChoice = getComputerChoice();
-      humanSpan.innerText = `${humanChoice}`;
-      computerSpan.innerText = `${computerChoice}`;
-      playRound(humanChoice, computerChoice);
-    });
-
-    scissorsBtn.addEventListener("click", function () {
-      const humanChoice = "scissors";
-      const computerChoice = getComputerChoice();
-      humanSpan.innerText = `${humanChoice}`;
-      computerSpan.innerText = `${computerChoice}`;
-      playRound(humanChoice, computerChoice);
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const humanChoice = btn.id;
+        const computerChoice = getComputerChoice();
+        humanSpan.innerText = `${humanChoice}`;
+        computerSpan.innerText = `${computerChoice}`;
+        playRound(humanChoice, computerChoice);
+      });
     });
   }
 
