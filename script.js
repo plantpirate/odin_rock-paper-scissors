@@ -43,6 +43,7 @@ function playGame() {
   function getHumanChoice() {
     buttons.forEach((btn) => {
       btn.addEventListener("click", function () {
+        gameResults.innerText = "";
         const humanChoice = btn.id;
         const computerChoice = getComputerChoice();
         updateUI(humanChoice, computerChoice);
