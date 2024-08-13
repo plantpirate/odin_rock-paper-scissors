@@ -13,7 +13,13 @@ function getComputerChoice() {
   // create array with string options
   const choicesArr = ["rock", "paper", "scissors"];
   // generate a random number up to length of const array
-  const computerChoice = choicesArr[Math.floor(Math.random() * 3)];
+  let computerChoice;
+
+  do {
+    computerChoice = choicesArr[Math.floor(Math.random() * 3)];
+  } while (computerChoice === getComputerChoice.previousChoice);
+
+  getComputerChoice.previousChoice = computerChoice;
   return computerChoice;
 }
 
