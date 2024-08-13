@@ -56,11 +56,7 @@ function playGame() {
   getHumanChoice();
 
   function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "rock" && computerChoice === "rock") {
-      results.innerText = "Draw!";
-    } else if (humanChoice === "paper" && computerChoice === "paper") {
-      results.innerText = "Draw!";
-    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
+    if (humanChoice === computerChoice) {
       results.innerText = "Draw!";
     } else if (humanChoice === "rock" && computerChoice === "paper") {
       computerScore += 1;
