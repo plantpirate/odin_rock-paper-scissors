@@ -2,9 +2,7 @@
 console.log("hello jobin");
 
 function getComputerChoice() {
-  // create array with string options
   const choicesArr = ["rock", "paper", "scissors"];
-  // generate a random number up to length of const array
   let computerChoice;
 
   do {
