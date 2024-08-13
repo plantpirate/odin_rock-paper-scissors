@@ -43,6 +43,15 @@ function playGame() {
     resetScores();
     gameEnded = true;
   };
+  const displayFinalResults = function () {
+    if (humanScore === 5) {
+      gameResults.innerText = "You won the game";
+      endGame();
+    } else if (computerScore === 5) {
+      gameResults.innerText = "You lost the game";
+      endGame();
+    }
+  };
   let humanScore = 0;
   let computerScore = 0;
   let gameEnded = false;
@@ -86,13 +95,7 @@ function playGame() {
     }
     updateUI(humanChoice, computerChoice);
 
-    if (humanScore === 5) {
-      gameResults.innerText = "You won the game";
-      endGame();
-    } else if (computerScore === 5) {
-      gameResults.innerText = "You lost the game";
-      endGame();
-    }
+    displayFinalResults();
   }
 }
 playGame();
